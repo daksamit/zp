@@ -166,6 +166,8 @@ Wpisujesz na **rodzicu** (kontenerze), układają się **bezpośrednie dzieci**:
 
 ## Ściąga 4: Cheatsheet właściwości CSS (wg kategorii)
 
+> Pełniejszą, angielską ściągę w podobnym podziale znajdziesz też na [Coddy - CSS Cheat Sheet](https://coddy.tech/cheat-sheets/css).
+
 ### 1. Typografia (font i tekst)
 
 | Właściwość | Co robi | Przykład |
@@ -387,6 +389,7 @@ Spotkanie **0104** zamyka blok zajęć w semestrze zimowym i ma wyjątkowy ukła
 
 - [MDN Web Docs - CSS po polsku](https://developer.mozilla.org/pl/docs/Web/CSS) - kompletna dokumentacja właściwości i selektorów CSS.
 - [DevDocs - CSS](https://devdocs.io/css/) - błyskawiczna wyszukiwarka dokumentacji CSS (działa też offline po zapisaniu w przeglądarce).
+- [Coddy - CSS Cheat Sheet](https://coddy.tech/cheat-sheets/css) - przejrzysta ściąga z właściwości CSS podzielona na kategorie.
 - [CSS-Tricks: A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - najsłynniejsza wizualna ściąga z Flexboxa (obok siebie właściwości rodzica i dzieci).
 
 ### Gry i ćwiczenia interaktywne
