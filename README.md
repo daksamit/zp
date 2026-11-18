@@ -97,6 +97,31 @@ Chcesz ustawić pozycje menu obok siebie albo ułożyć trzy karty w rzędzie? N
 
 > Chcesz przećwiczyć selektory w praktyce? Zagraj w [CSS Diner](https://flukeout.github.io/).
 
+### Kategorie selektorów i właściwości (stylów) CSS
+
+Żeby łatwo odnaleźć się w dokumentacji (np. MDN) i w narzędziach DevTools, cały CSS warto dzielić na dwie mapy:
+
+**1. Kategorie selektorów** *(kogo stylujemy?)*:
+
+| Kategoria | Przykłady | Do czego służy |
+|---|---|---|
+| **Podstawowe** | `p`, `.card`, `#zapis`, `*` | wybór po znaczniku, klasie, `id` lub wszystkich naraz |
+| **Kombinatory (relacje)** | `nav a`, `ul > li`, `h2 + p` | wybór po położeniu w HTML (potomek, bezpośrednie dziecko, sąsiad) |
+| **Atrybutów** | `[required]`, `input[type="email"]` | wybór po obecności lub wartości atrybutu HTML |
+| **Pseudoklasy** | `:hover`, `:focus-visible`, `:nth-child(even)` | wybór po stanie elementu (np. najechanie, fokus) lub pozycji |
+| **Pseudoelementy** | `::before`, `::after`, `::first-line` | stylowanie fragmentu elementu lub wstawianie treści z CSS |
+
+**2. Kategorie właściwości / stylów** *(co zmieniamy?)*:
+
+| Kategoria | Przykładowe właściwości |
+|---|---|
+| **Layout (układ strony)** | `display` (`block`, `flex`, `grid`), `flex-direction`, `justify-content`, `align-items`, `gap`, `position` |
+| **Box model i wymiary** | `box-sizing`, `width`, `max-width`, `height`, `padding`, `margin`, `border`, `border-radius` |
+| **Typografia** | `font-family`, `font-size`, `font-weight`, `line-height`, `text-align`, `text-decoration` |
+| **Kolory i tła** | `color`, `background-color`, `background-image`, `opacity` |
+| **Efekty i animacje** | `box-shadow`, `transition`, `transform`, `@keyframes` *(0104)* |
+| **Responsywność i a11y** | `@media (...)`, `outline`, `outline-offset` |
+
 ## Ściąga 1b: Nazwy klas i zmiennych - po angielsku
 
 Właściwości CSS są po angielsku, więc nazwy klas i zmiennych też piszemy po angielsku - tak jak w Bootstrapie, Tailwindzie i w pracy. Komentarze i treść strony zostają po polsku. Na INF.03 piszesz nazwy dokładnie takie, jakie podaje arkusz.
@@ -138,6 +163,81 @@ Wpisujesz na **rodzicu** (kontenerze), układają się **bezpośrednie dzieci**:
 ```
 
 > Do treningu: gra [Flexbox Froggy (po polsku)](https://flexboxfroggy.com/#pl) oraz wizualna ściąga [CSS-Tricks: A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
+
+## Ściąga 4: Cheatsheet właściwości CSS (wg kategorii)
+
+### 1. Typografia (font i tekst)
+
+| Właściwość | Co robi | Przykład |
+|---|---|---|
+| `font-family` | krój pisma + rodzina zapasowa | `font-family: 'Inter', sans-serif;` |
+| `font-size` | rozmiar tekstu | `font-size: 1.125rem;` |
+| `font-weight` | grubość czcionki (`400` zwykły, `700` pogrubiony) | `font-weight: 700;` |
+| `line-height` | interlinia (wysokość wiersza) | `line-height: 1.6;` |
+| `text-align` | wyrównanie tekstu (`left`, `center`, `right`) | `text-align: center;` |
+| `text-decoration` | podkreślenie / usunięcie podkreślenia linku | `text-decoration: none;` |
+| `letter-spacing` | odstęp między literami | `letter-spacing: 0.05em;` |
+| `text-transform` | wielkość liter (`uppercase`, `lowercase`, `capitalize`) | `text-transform: uppercase;` |
+
+### 2. Kolory i tła (`color` & `background`)
+
+| Właściwość | Co robi | Przykład |
+|---|---|---|
+| `color` | kolor tekstu | `color: var(--color-text);` |
+| `background-color` | kolor tła pudełka | `background-color: #0f172a;` |
+| `background-image` | obrazek lub gradient w tle | `background-image: linear-gradient(...);` |
+| `background-size` | skalowanie tła (`cover`, `contain`) | `background-size: cover;` |
+| `opacity` | przezroczystość całego elementu (`0`–`1`) | `opacity: 0.85;` |
+
+### 3. Pudełko i wymiary (`box properties`)
+
+| Właściwość | Co robi | Przykład |
+|---|---|---|
+| `box-sizing` | sposób liczenia `width`/`height` | `box-sizing: border-box;` |
+| `width` / `max-width` | szerokość / maksymalna szerokość | `max-width: 62rem;` |
+| `height` / `min-height` | wysokość / minimalna wysokość | `min-height: 100vh;` |
+| `padding` | wewnętrzny odstęp (ma tło elementu) | `padding: 1.5rem;` |
+| `margin` | zewnętrzny odstęp (`0 auto` centruje blok) | `margin: 0 auto 2rem;` |
+| `border` | ramka wokół pudełka | `border: 1px solid #334155;` |
+| `border-radius` | zaokrąglenie rogów | `border-radius: 0.75rem;` |
+| `box-shadow` | cień pod pudełkiem | `box-shadow: 0 10px 25px rgba(0,0,0,0.3);` |
+
+### 4. Klasyfikacja elementów (`classification properties`)
+
+| Właściwość | Co robi | Przykład |
+|---|---|---|
+| `display` | typ pudełka (`block`, `inline`, `inline-block`, `flex`, `grid`, `none`) | `display: flex;` |
+| `visibility` | widoczność z zachowaniem miejsca (`visible`, `hidden`) | `visibility: hidden;` |
+| `list-style` | styl punktorów listy `ul`/`ol` | `list-style: none;` |
+| `overflow` | zachowanie treści wystającej poza pudełko (`hidden`, `auto`) | `overflow: hidden;` |
+| `cursor` | wygląd kursora po najechaniu | `cursor: pointer;` |
+
+### 5. Układ i pozycjonowanie (`layout & positioning`)
+
+| Właściwość | Co robi | Przykład |
+|---|---|---|
+| `flex-direction` | kierunek osi Flexboxa (`row`, `column`) | `flex-direction: column;` |
+| `justify-content` | wyrównanie wzdłuż osi głównej | `justify-content: space-between;` |
+| `align-items` | wyrównanie wzdłuż osi poprzecznej | `align-items: center;` |
+| `gap` / `flex-wrap` | odstęp między dziećmi i zawijanie wierszy | `gap: 1rem; flex-wrap: wrap;` |
+| `position` | sposób pozycjonowania (`static`, `relative`, `absolute`, `fixed`, `sticky`) | `position: sticky; top: 0;` |
+| `z-index` | kolejność warstw na osi Z (dla elementów z `position`) | `z-index: 10;` |
+
+### 6. Efekty, przejścia i animacje *(wchodzi na 0104)*
+
+| Właściwość | Co robi | Przykład |
+|---|---|---|
+| `transition` | płynne przejście przy zmianie stanu (np. `:hover`) | `transition: background-color 0.2s ease;` |
+| `transform` | przesunięcie, obrót lub powiększenie bez psucia układu | `transform: translateY(-2px);` |
+| `animation` / `@keyframes` | wieloetapowa animacja w pętli lub po załadowaniu | `animation: fadeIn 0.4s ease;` |
+
+### 7. Responsywność i dostępność (`RWD & a11y`)
+
+| Zapis / Właściwość | Co robi | Przykład |
+|---|---|---|
+| `@media (...)` | reguły aktywne dla konkretnej szerokości ekranu | `@media (max-width: 640px) { ... }` |
+| `outline` / `outline-offset` | widoczna obwódka fokusu przy nawigacji klawiaturą (`:focus-visible`) | `outline: 3px solid var(--color-accent);` |
+| `border-collapse` | łączenie ramek sąsiednich komórek w `<table>` | `border-collapse: collapse;` |
 
 ---
 
@@ -286,6 +386,7 @@ Spotkanie **0104** zamyka blok zajęć w semestrze zimowym i ma wyjątkowy ukła
 ### Dokumentacja i ściągi CSS
 
 - [MDN Web Docs - CSS po polsku](https://developer.mozilla.org/pl/docs/Web/CSS) - kompletna dokumentacja właściwości i selektorów CSS.
+- [DevDocs - CSS](https://devdocs.io/css/) - błyskawiczna wyszukiwarka dokumentacji CSS (działa też offline po zapisaniu w przeglądarce).
 - [CSS-Tricks: A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - najsłynniejsza wizualna ściąga z Flexboxa (obok siebie właściwości rodzica i dzieci).
 
 ### Gry i ćwiczenia interaktywne
