@@ -274,6 +274,11 @@ Spotkanie **0104** zamyka blok zajęć w semestrze zimowym i ma wyjątkowy ukła
 
 - **CSS Grid (siatka dwuwymiarowa)**, **animacje (`transition`, `transform`, `@keyframes`)** i **`position: sticky`** - wchodzą już na najbliższym spotkaniu **0104**,
 - **Tailwind CSS, UnoCSS, shadcn/ui i atomic CSS** - podejście oparte na klasach użytkowych (utility-first): na dziś Tailwind jest tylko wyzwaniem ⭐ w wariancie C (przykłady gotowych stron zobaczysz w [Tailwind CSS Showcase](https://tailwindcss.com/showcase)), **[UnoCSS](https://unocss.dev/interactive/)** to jego lekki, bardzo szybki odpowiednik, a **shadcn/ui** to popularny zestaw gotowych komponentów UI zbudowanych na Tailwindzie. Porównanie „czysty CSS vs Tailwind" na forum zrobimy na **0104** (na sprawdzianie i na INF.03 tych narzędzi nie ma),
+- **Design system** - wspólna „instrukcja obsługi" wyglądu w produkcie lub firmie, która łączy pracę projektantów (np. w Figmie) i programistów. Składa się z trzech warstw:
+  1. **Design tokens (tokeny)** - nazwane wartości kolorów, fontów, zaokrągleń i odstępów (dokładnie tak jak Twoje zmienne `--color-*` w `:root`, dzięki którym cały zespół używa tego samego `--color-accent` zamiast zgadywać odcienie `#hex`).
+  2. **Biblioteka komponentów** - gotowe, przetestowane pod kątem dostępności (a11y) klocki UI: przyciski, karty, pola formularzy, tabele czy okna modalne (np. **shadcn/ui** albo klasyczny **Bootstrap**).
+  3. **Zasady i dokumentacja** - kiedy użyć danego przycisku, jaki ma być kontrast, jak zachowuje się układ na telefonie.
+  Znane przykłady to **Material Design** (Google) czy **Human Interface Guidelines** (Apple). Dzięki design systemowi każda nowa podstrona wygląda spójnie, a wdrożenie trybu ciemnego (dark mode) albo zmiany brandingu sprowadza się do podmiany tokenów w jednym miejscu,
 - **preprocesory CSS (SASS/SCSS)** i metodologie nazewnictwa klas (BEM) - przydatne w dużych zespołach, na tym kursie i na INF.03 wystarcza czysty, nowoczesny CSS3.
 
 ## Przydatne linki
