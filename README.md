@@ -330,27 +330,9 @@ Dla tych, którzy skończyli wariant A:
 
 1. **Dokończ stylowanie fanpage'a** (wariant A i B) - przetestuj widok mobilny (`375px`) i desktopowy (`1280px`) w Device Toolbar. Pamiętaj: **wyjście poza propozycję z zajęć i własne, twórcze podejście jest lepiej oceniane niż kopia 1:1**.
 2. **Uruchom audyt Lighthouse (zakładka Accessibility)** w Chrome DevTools i popraw znalezione błędy kontrastu lub dostępności.
-3. **Przygotuj się do sprawdzianu semestralnego na 0104** - szczegóły niżej!
-4. **Wyślij projekt**: spakuj **cały katalog strony** (np. `fanpage`, `public` albo `public_html` - razem z `style.css` i `images/`) do archiwum ZIP i wyślij na **dominik.aksamit@zst.tarnow.pl**. W temacie maila podaj 0103 imię, nazwisko i grupę (A/B), np. "0103 Jan Kowalski B".
+3. **Wyślij projekt**: spakuj **cały katalog strony** (np. `fanpage`, `public` albo `public_html` - razem z `style.css` i `images/`) do archiwum ZIP i wyślij na **dominik.aksamit@zst.tarnow.pl**. W temacie maila podaj 0103 imię, nazwisko i grupę (A/B), np. "0103 Jan Kowalski B".
 
 **Zabezpiecz katalog projektu!** Na następnym spotkaniu (**0104**) dopiszemy do Twojego fanpage'a pierwszy skrypt w JavaScript.
-
----
-
-## Ważne: Sprawdzian semestralny na 0104 (zamiast 10-minutowej kartkówki!)
-
-Spotkanie **0104** zamyka blok zajęć w semestrze zimowym i ma wyjątkowy układ:
-- **Pierwsze 60 minut:** szybka rozgrzewka-powtórka na plusy + CSS Grid, animacje, rzut oka na Tailwind CSS oraz **pierwsze kroki w JavaScript** („moment wow": przełącznik dark mode i licznik kliknięć!).
-- **15 minut przerwy.**
-- **Ostatnie 60 minut: PISEMNY SPRAWDZIAN SEMESTRALNY** (kartka i długopis, bez komputerów i bez AI) obejmujący cały semestr **0101–0104** (30 pytań zamkniętych A–D w stylu INF.03 + 6–8 krótkich zadań otwartych, łącznie 50 pkt).
-
-**Co z dzisiejszego spotkania (0103) wejdzie na sprawdzian:**
-- 3 sposoby podpięcia CSS i dokładny zapis `<link rel="stylesheet" href="style.css">`,
-- selektory (`element`, `.klasa`, `#id`, `rodzic potomek`, `:hover`, `:nth-child(even)`) oraz specyficzność („która reguła wygra?"),
-- **box model**: różnica między `padding` (wewnętrzny, z tłem) a `margin` (zewnętrzny, przezroczysty), `border`, działanie `box-sizing: border-box`,
-- jednostki: czym różni się `px`, `%`, `rem`, `em` oraz `vh`/`vw`,
-- **Flexbox**: `display: flex` (na rodzicu!), `flex-direction`, `justify-content` vs `align-items`, `gap`, `flex-wrap`,
-- **responsywność i a11y**: rola `meta viewport`, zapis `@media (max-width: ...)` / `@media (min-width: ...)`, zasada kontrastu WCAG.
 
 ---
 
